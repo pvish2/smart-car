@@ -1,19 +1,11 @@
 # Cloud Car
 
 The Android Things Car sample demonstrates how to create a “smart” car.
-The sample captures a button press from a user, obtains an image via a camera peripheral,
-processes the image data using Google’s Cloud Vision API, and uploads the image, Cloud Vision
-annotations and metadata to a Firebase database where it can be viewed by a companion app.
-
-## Screenshots
-
-![Car sample demo][demo-gif]
-
-[(Watch the demo on YouTube)][demo-yt]
-
-## Schematics
-
-![Schematics](schematics.png)
+The sample captures photos , location , and other user health data and upload it to fire base
+and application will receive real time notification.
+Solution will gather data from all sensors(installed) and manipulate to detect driver driving behavior , accident collosion are , predict accident.
+Machine learning to predict accident (on basis of pre-uploaded data).
+Personalize notification in faimly members voice  
 
 ## Pre-requisites
 
@@ -27,6 +19,16 @@ annotations and metadata to a Firebase database where it can be viewed by a comp
     - 1 resistor
     - jumper wires
     - 1 breadboard
+    - PIR Sensor
+    - Accelerometer
+    - RFID Tag Receiver
+    - Toy car
+    -Temprature Sensor
+    -Rain drop sensor
+    -Battery/Power bank
+    -switch
+    -Pulse Sensor
+    -Ethonal/Alcohol Sensor
 
 ## Setup and Build
 
@@ -67,62 +69,8 @@ To setup, follow these steps below.
           }
 
 
-There are two modules: `app` and `companionApp`, the former is on device while the latter on
+There are three modules: `app` ,`companionAppForEmergecyHelp` and `companionAppForDashboard`, the former is on device while the latter on
 companion device e.g. Android phone.
 
 ## Running
 
-To run the `app` module on an Android Things board:
-
-1. Connect a push button to your device's GPIO pin according to the schematics below
-2. Deploy and run the `app` module
-3. Take a picture by pushing the button
-4. Verify from Firebase Console that pictures are uploaded to a log in the Firebase database
-   of your project
-5. Verify from Firebase Console that the uploaded pictures in the log get annotations after
-   a small delay from the GCP Cloud Vision
-
-To run the `companionApp` module on your Android phone:
-
-1. Deploy and run the `companionApp` module
-2. Verify that you see a new annotated picture every time you push the button
-
-## Enable auto-launch behavior
-
-This sample app is currently configured to launch only when deployed from your
-development machine. To enable the main activity to launch automatically on boot,
-add the following `intent-filter` to the app's manifest file:
-
-```xml
-<activity ...>
-
-    <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
-        <category android:name="android.intent.category.HOME"/>
-        <category android:name="android.intent.category.DEFAULT"/>
-    </intent-filter>
-
-</activity>
-```
-
-## License
-
-Copyright 2016 The Android Open Source Project, Inc.
-
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
-
-[demo-yt]: https://www.youtube.com/watch?v=lCdlz7tk_oI&list=PLWz5rJ2EKKc-GjpNkFe9q3DhE2voJscDT&index=1
-[demo-gif]: demo1.gif

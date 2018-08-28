@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "340216985109",
+    "firebase_url": "https://my-car-203111.firebaseio.com",
+    "project_id": "my-car-203111",
+    "storage_bucket": "my-car-203111.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340216985109:android:4f07b2fb8c4ffde8",
+        "android_client_info": {
+          "package_name": "com.example.androidthings.doorbell"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "340216985109-690ff218j70bm43lmdujfuu0goa2tp47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnRl1Xnsv3PLYTLkWNYiFaOUrVbhw2b9A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340216985109:android:399dd05cf1d4cb91",
+        "android_client_info": {
+          "package_name": "com.piyushdroid.androidthings.smartcar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "340216985109-690ff218j70bm43lmdujfuu0goa2tp47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnRl1Xnsv3PLYTLkWNYiFaOUrVbhw2b9A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
