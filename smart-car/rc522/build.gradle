@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'android-things-rc522'
+
+    publishedGroupId = 'com.galarzaa.android-things'
+    libraryName = 'Android Things RC522'
+    artifact = 'rc522'
+
+    libraryDescription = 'Android library to communicate with RFID Module RC522'
+
+    siteUrl = 'https://github.com/Galarzaa90/android-things-rc522'
+    gitUrl = 'https://github.com/Galarzaa90/android-things-rc522.git'
+    issuesUrl = 'https://github.com/Galarzaa90/android-things-rc522/issues'
+
+    libraryVersion = versions.publishVersion
+
+    developerId = 'galarzaa90'
+    developerName = 'Allan Galarza'
+    developerEmail = 'allan.galarza@gmail.com'
+
+    licenseName = 'MIT License'
+    licenseUrl = 'https://raw.githubusercontent.com/Galarzaa90/android-things-rc522/master/LICENSE.md'
+    allLicenses = ["MIT"]
+}
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode versions.publishVersionCode
+        versionName versions.publishVersion
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compileOnly "com.google.android.things:androidthings:${versions.thingsLib}"
+    implementation "com.android.support:support-annotations:${versions.support}"
+}
+
+apply from: '../bintray.gradle'
+apply from: '../pom.gradle'

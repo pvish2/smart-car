@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Car Reciever</string>
+    <string name="annotation">Car location : IND - Noida /n IP: 10.203.60.178 \nDevice ID byte: 0x60  \n" +
+                    "Temperature: 24.499886</string>
+</resources>
