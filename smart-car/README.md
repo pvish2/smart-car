@@ -1,4 +1,4 @@
-# Cloud Car
+# Smart car - Road Safety Project
 
 The Android Things Car sample demonstrates how to create a “smart” car.
 The sample captures photos , location , and other user health data and upload it to fire base
